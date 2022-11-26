@@ -1,7 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+// import { useFormik  } from 'formik';
 import axios from 'axios';
-import styles from './styles.module.css'
+import styles from './styles.module.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const Login = () => {
     const[data, setData] = useState({
@@ -42,7 +48,7 @@ const Login = () => {
             <div className={styles.left}>
             <form className={styles.form_container} onSubmit={handleSubmit}>
                 <h1>Login to Your Account</h1>
-                 <input
+                 {/* <input
                  type="email"
                  placeholder='email'
                  name='email'
@@ -50,8 +56,31 @@ const Login = () => {
                  value={data.email}
                  required
                  className={styles.input}
-                />
-                 <input
+                /> */}
+                <div className='form-group mt-4 d-flex justify-content-center'>
+        <Box
+      component="form"
+      sx={{
+        '& .MuiTextField-root': { m: 1, width: '25ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    />
+ <div>
+        <TextField
+          label="Email"
+          id="outlined-size-small"
+          size="small"
+          type="email"
+                 name='email'
+                 onChange={handleChange}
+                 value={data.email}
+                 required
+                 className={styles.input}
+        />
+        </div>
+        </div>
+                 {/* <input
                  type="password"
                  placeholder='password'
                  name='password'
@@ -59,7 +88,33 @@ const Login = () => {
                  value={data.password}
                  required
                  className={styles.input}
-                />
+                /> */}
+                 
+                 <div className='form-group mt-4 d-flex justify-content-center'>
+        <Box
+      component="form"
+      sx={{
+        '& .MuiTextField-root': { m: 1, width: '25ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    />
+ <div>
+        <TextField
+          label="Password"
+          id="outlined-size-small"
+          size="small"
+          type="password"
+          
+          name='password'
+          onChange={handleChange}
+          value={data.password}
+          required
+          className={styles.input}
+        />
+        </div>
+        </div>
+
                 {error && <div className={styles.error_msg} >error</div>}
                 <button type='submit' className={styles.green_btn}>
                     Sign In
