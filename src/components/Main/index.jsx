@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 const Main = () => {
 
     const handleLogout = () => {
-        localStorage.removeItem("token");
+        localStorage.removeItem("token"); 
         window.location.reload();
     };
     return (
