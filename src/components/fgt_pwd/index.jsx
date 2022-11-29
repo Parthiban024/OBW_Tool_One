@@ -18,8 +18,7 @@ import Rectangle_6 from '../images/Rectangle _6.png';
 import Login_image_2 from '../images/Login_image_2.svg';
 
 
-
-const Login = () => {
+const Forget = () => {
     const[data, setData] = useState({
       
         email:"",
@@ -56,44 +55,20 @@ const Login = () => {
 
        <div className='row'>
        <div className='col-1'></div>
-       <div className='col-5 mt-5 d-flex justify-content-center flex-column'>
+       <div className='col-5 mt-5'>
        <img className='obw_logo' src={Rectangle_1} alt="BigCo Inc. logo" />
        <img className='Login_image_2' src={Login_image_2} alt="BigCo Inc. logo" />
        </div>
-       <div className='col-5 mt-5 input_login_2'>
+       <div className='col-5 mt-5'>
      <div className='container input_login'>
       <div className=' d-flex justify-content-center'>
-      <i className="fas fa-light fa-user color"></i>
+      <i className="fas fa-light fa-user color_3"></i>
       
       {/* <FontAwesomeIcon icon="fas fa-duotone fa-user" className='color' /> */}
       </div>
       <div>
-       <form autoComplete='off' onSubmit={handleSubmit}>
+       <div autoComplete='off' onSubmit={handleSubmit}>
          <div className='login_form'>
-         <div className='form-group mt-4 d-flex justify-content-center'>
-         <Box
-       component="form"
-       sx={{
-         '& .MuiTextField-root': { m: 1, width: '25ch' },
-       }}
-       noValidate
-       autoComplete="off"
-     />
-  <div className='log_email'> 
-         <TextField
-           label="Email"
-           id="outlined-size-small"
-           size="small"
-           className='email_login'
-           type="email"
-           name='email'
-           onChange={handleChange}
-           value={data.email}
-           required
-         />
-       
-         </div>
-         </div>
          <div className='form-group mt-4 d-flex justify-content-center'>
          <Box
        component="form"
@@ -105,46 +80,35 @@ const Login = () => {
      />
   <div>
          <TextField
-           label="Password"
+           label="Email"
            id="outlined-size-small"
            size="small"
            className='email_login'
-           type='password' 
-           name='password'
+           type="email"
+           name='email'
            onChange={handleChange}
-           value={data.password}
+           value={data.email}
            required
          />
          </div>
          </div>
          </div>
-<div className='d-flex justify-content-center'>
-  {error && <div className='d-flex justify-content-center error mt-4' >error</div>}
-  </div>
+
+  {error && <div className='d-flex justify-content-center' >error</div>}
                <div className='d-flex justify-content-center'>
-               
+                <Link to = "/main">
                <button type='submit' className='btn btn-primary mt-4 log_btn mb-3'>
-                  Sign In
+                  Reset
               </button>
-             
+              </Link>
               </div>
-   </form>
+       </div>
        </div>
        <div className='d-flex justify-content-center log_fgtpwd'>
-       <p className='d-flex justify-content-center'>Don't have an account?</p>&nbsp;
-              <Link to = "/signup" className=''>
+       <p className='d-flex justify-content-center'>Back to Homepage</p>&nbsp;
+              <Link to = "/login" className=''>
                 {/* <button type='button' className='btn btn-primary mt-2 log_btn mb-3'> */}
-              <parent href='#'className=' mb-3'>Sign Up</parent>
-                  
-               {/* </button> */}
-               </Link>
-              
-            </div>
-            <div className='d-flex justify-content-center log_fgtpwd'>
-       <p className='d-flex justify-content-center'>Forgot your password?</p>&nbsp;
-              <Link to = "/fgt_pwd" className=''>
-                {/* <button type='button' className='btn btn-primary mt-2 log_btn mb-3'> */}
-              <p className='mb-3 get_new'>Get New</p>
+              <parent href='#'className=' mb-3 get_new'>Click here</parent>
                   
                {/* </button> */}
                </Link>
@@ -159,4 +123,4 @@ const Login = () => {
     
 };
 
-export default Login;
+export default Forget;

@@ -1,0 +1,105 @@
+*{
+	box-sizing: border-box;
+  }
+  .obw_logo{
+	width: 50% !important;
+	margin-top: 10%;
+  margin-left: 70px;
+  }
+  .obw_logo_2{ 
+	margin-top: 20px;
+	width: 10%;
+	border-radius: 20px;
+	box-shadow: 5px 10px 40px 5px gray;
+  }
+  .obw_logo_3{
+	width: 15%;
+	margin-top: 30px;
+  }
+  .row {
+	--bs-gutter-x: 1.5rem;
+	--bs-gutter-y: 0;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: calc(-1 * var(--bs-gutter-y));
+	margin-right: calc(1 * var(--bs-gutter-x)) !important;
+	margin-left: calc(1 * var(--bs-gutter-x)) !important;
+  }
+  .Name{
+	/* padding: 2px 5px  5px 5px!important; */
+	
+  }
+  .input_login{
+	margin-top: 100px !important;
+  }
+  .email_login{
+width: 100%;
+	margin-right: 70px !important;
+  }
+  .login_form{
+	/* margin-left: -20%; */
+  }
+  .log_btn{
+	padding: 3px 25px 3.5px 25px !important;
+	font-size: 15px !important;
+  }
+  .log_btn:hover{
+	box-shadow: 2px 2px 10px 2px gray !important;
+  }
+  .log_fgtpwd {
+	color: #989fbb !important;
+	font-size: 17px !important;
+  }
+  .log_fgtpwd a{
+	text-decoration: none;
+	font-weight: 600;
+  }
+  .log_fgtpwd:hover{
+	
+	cursor: pointer;
+  }
+  .log_sinin{
+	text-decoration: none;
+  }
+  .signin_icon{
+	width: 15%;
+	margin-top: -20px;
+  }
+  .get_new{
+	color: #e7413d;
+  }
+  .Login_image_2{
+	width: 70%;
+  }
+  .color_2{
+	color: #00364d;
+	font-size: 50px;
+  margin-top: 3px;
+  }
+   .color{
+    color: #00364d;
+    font-size: 50px;
+    margin-top: 50px;
+    }
+ .color_3{
+  color: #00364d;
+  font-size: 50px;
+  margin-top: 100px;
+ }
+/* .input_login_2{
+  border: 1px solid skyblue;
+  box-shadow: 2px 2px 10px 2px gray !important;
+  border-radius: 10px;
+
+} */
+ .error{
+  background-color: #e7413d;
+  color: black;
+  width: 52%;
+ } 
+  
+  
+  
+  
+  
+  
